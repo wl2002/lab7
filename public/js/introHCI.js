@@ -18,9 +18,11 @@ function initializePage() {
 		// get rid of 'project' from the front of the id 'project3'
 		var idNumber = projectID.substr('project'.length);
 
+		console.log("This is the num: " + idNumber);
 		// this is the URL we'll call
 		var url_call = '/project/'+idNumber;
 
+		console.log("the url: " + url_call);
 		// How to respond to the GET request
 		function addProjectDetails(project_json) {
 			// We need to compute a display string for the date
@@ -58,7 +60,7 @@ function initializePage() {
 	});
 
 	$('#newProjectSubmitButton').click(function(e) {
-		console.log('clicked');
+		console.log("HELLOOOOOO");
 		var title = $('#new-project-form #title').val();
 		var image_url = $('#new-project-form #image_url').val();
 		var date = $('#new-project-form #date').val();
